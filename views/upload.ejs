@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--Bootstrap-->
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-theme.min.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css"/>
+		<!-- 数据管理中的bootstrap -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>   
+		<script type="text/javascript" src="../javascripts/bootstrap-table-export.js" ></script>
+	    <!-- Latest bootstrap compiled and minified CSS -->
+		<!-- <link rel="stylesheet" href="../stylesheets/bootstrap.min.css" /> -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	    <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
+		<!-- Latest bootstrap compiled and minified JavaScript -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://unpkg.com/popper.js@1.14.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!--		<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+-->		
+		<!-- <script type="text/javascript" src="../javascripts/bootstrap.min.js" ></script> -->
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	   	
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+		<!-- Load Leaflet -->
+		<link rel="stylesheet" type="text/css" href="stylesheets/leafletAPI.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/leaflet.css"/>
+		<script type="text/javascript" src="javascripts/leaflet.js"></script>
+		<script type="text/javascript" src="javascripts/leaflet.ChineseTmsProviders.js"></script>
+		
+		<!--Echarts -->
+		<script type="text/javascript" src="javascripts/echarts.min.js"></script>
+		
+		<!--jQuery  样式-->
+		<script type="text/javascript" src="javascripts/jquery-2.1.1.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+		
+		<!--saidbar_menu-->
+		<link rel="stylesheet" type="text/css" href="stylesheets/sidebar-menu.css"/>
+		<script type="text/javascript" src="javascripts/sidebar-menu.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+		
+
+		
+		<!--Link StyleSheet(hand setting)-->
+		<link rel="stylesheet" type="text/css" href="../stylesheets/style.css"/>
+		<script type="text/javascript" src="/javascripts/leaflet-side-by-side.js"></script>
+		<!-- 打印控件 -->
+		<script type="text/javascript" src="javascripts/leaflet.easyprint.js"></script>
+
+		<script type="text/javascript" src="javascripts/leaflet.marker.highlight.js" ></script>
+		<link rel="stylesheet" type="text/css" href="stylesheets/leaflet.marker.highlight.css">
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> -->
+	<title>每日一记</title>
+<!-- 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	
+	<style type="text/css">
+		.ZD_div{
+			width: 550px;
+			height: 300px;
+			border: hidden;
+			margin: 10px 20px;
+			padding: 20px;
+			border-radius: 15px;
+			background-color: #F0F0F0;
+		}
+		
+		.ZD_input{
+			width: 520px;
+			height: 190px;
+			padding: 20px;
+			border: hidden;
+			background-color: #F0F0F0;
+		}
+
+	</style>
+</head>
+
+<body >
+<%- include navbar %>		
+
+
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"style="margin-left:600px;margin-top:200px">
+	添加日志
+</button>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					每日一记
+				</h4>
+			</div>
+			
+			
+			<form class="ZD_div" role="form" method="post" >
+				<input type="text"  id="tittle" name="tittle" placeholder="请输入日志标题" required></input>
+				
+				<input type="text"  id="writter" name="writter" placeholder="请输入日志作者" required></input>
+				<input type="text"  class="ZD_input" id="content" name="content" placeholder="请输入日志内容" required></input>
+			
+			
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-default" >
+					提交更改
+				</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">关闭
+				</button>
+				
+			</div>
+			
+			</form>
+		
+			
+			
+			
+			
+			
+
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+</body>
+</html>

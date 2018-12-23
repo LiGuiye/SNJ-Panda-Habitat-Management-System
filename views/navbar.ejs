@@ -1,0 +1,29 @@
+
+<div id="navDIV" class="navbar-default">
+	<nav class="navbar default-layout-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header" >
+				<a href = "/">
+					<img id="system_logo" src="/stylesheets/images/System_logo.png" alt="logo" />
+				</a>
+			</div>
+			&nbsp;&nbsp;&nbsp;
+	<iframe width="650" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="//i.tianqi.com/index.php?c=code&id=12&color=%2300B050&icon=3&py=shennongjia&num=5&site=12"></iframe>
+
+			<ul class="nav navbar-nav navbar-right"> 
+			
+				<% if(locals.islogin){%>  
+				<a type="button" class="btn btn-light nav-btn" href=""><span class="glyphicon glyphicon-user">&nbsp;</span>Welcome: <%= test %></a>
+				<a type="button" class="btn btn-light nav-btn" href="/logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+				<% }else{%>
+				<a type="button" class="btn btn-light nav-btn" href="/reg"><span class="glyphicon glyphicon-edit"></span> &nbsp;Register</a> 
+				<a type="button" class="btn btn-light nav-btn" href="/login"><span class="glyphicon glyphicon-user"></span> &nbsp;Sign &nbsp;in</a>
+				<%}%>
+				<button type="button" class="btn btn-light nav-btn-learn" onclick="">Learn more</button> 
+			</ul>
+
+		</div>
+
+	</nav>
+</div>
+

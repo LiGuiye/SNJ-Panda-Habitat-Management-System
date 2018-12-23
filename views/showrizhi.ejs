@@ -1,0 +1,78 @@
+<%- include header %>
+<%- include navbar %>
+<!-- 如果是登录状态，则进入信息查询页面 -->
+<% if(locals.islogin){%>
+<!--按条件查询-->
+
+<center>
+<p>日志信息查询</p>
+<div class="container">
+    <div>
+        <form action="/users/searchrizhi" method="post">
+            标题：<input type="text" name="s_tittle" id="s_tittle" value="" class="text"/> &nbsp;&nbsp;
+						作者：<input type="text" name="s_writter" id="s_writter" value="" class="text"/> &nbsp;&nbsp;
+            <button id="queryinfo" type="submit" class="glyphicon glyphicon-search" title="查询"></button>
+        </form>
+    </div>
+</div>
+
+
+<!--用户信息显示的表单-->
+<div class="container">
+<table id="table"    data-toggle="table"     data-show-export="false"     data-pagination="true"     data-click-to-select="true"    data-toolbar="#toolbar">
+    <thead>
+    <tr>
+        <th data-field="state" data-checkbox="true"></th>
+      
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标题</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容</th>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;操作
+            
+        </th>
+    </tr>
+    </thead>
+    <tbody  align="center">
+        <% if (datas.length) { %>
+            <% datas.forEach(function(user){ %>
+            <tr >
+                <td data-checkbox="false"></td>
+                
+                <td ><%= user.tittle %></td>
+                <td ><%= user.writter %></td>
+                <td ><%= user.content %></td>
+                <td >
+                    <div class="btn-group operation">
+                        
+                        <a href="/users/delrizhi/<%= user.tittle %> ">删除</a>
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                       
+                    </div>
+                </td>
+            </tr>
+            <% }) %>
+        <% } %>
+    </tbody>	
+</table>
+</div>
+
+
+
+
+<% }else{%>
+    <!-- 否则，提示重新登陆 -->
+    <div id="myAlert" class="alert alert-warning">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>警告！</strong>请登陆后访问。
+    </div>
+        
+    <script>
+    $(function(){
+        $(".close").click(function(){
+            $("#myAlert").alert();
+        });
+    });
+    </script>
+<% }%>
+
+<%- include footer %>

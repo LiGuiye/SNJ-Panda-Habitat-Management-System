@@ -1,0 +1,122 @@
+<aside class="main-sidebar">
+	<section class="sidebar">
+		<ul class="sidebar-menu">
+			<li class="treeview">
+				<a href="#">
+					<i class="fa fa-edit"></i> <span>区域简介</span>
+					<i class="fa fa-angle-left pull-right"></i>
+				</a>
+				<ul class="treeview-menu">
+					<li>
+						<a href="/introduce" class="ajax"><i class="fa fa-circle-o"></i> 神农架简介</a>
+					</li>
+					<li>
+						<a href="/location" class="ajax"><i class="fa fa-circle-o"></i> 大熊猫背景</a>
+					</li>
+
+				</ul>
+			</li>
+
+			<li class="treeview">
+				<a href="#">
+					<i class="fa fa-table"></i> <span>大熊猫管理</span>
+					<i class="fa fa-angle-left pull-right"></i>
+				</a>
+				<ul class="treeview-menu">
+					<li>
+						<a href="/PandaManagement" class = "ajax"><i class="fa fa-circle-o"></i> 大熊猫管理手册</a>
+					</li>
+					<li>
+						<a href="/users" ><i class="fa fa-circle-o"></i>信息录入</a>
+					</li>
+				</ul>
+			</li>
+			<li class="treeview">
+				<a href="/">
+					<i class="fa fa-files-o"></i>
+					<span>栖息地管理</span>
+					<i class="fa fa-angle-left pull-right"></i>
+				</a>
+				<ul class="treeview-menu" style="display: none;">
+					<li>
+						<a href="/ndvi1998" class="ajax"><i class="fa fa-circle-o"></i>边界</a>
+					</li>
+					<li>
+						<a href="/ndvi2016" class="ajax"><i class="fa fa-circle-o"></i>坡度</a>
+					</li>
+					<li>
+						<a href="/contourline21" class="ajax"><i class="fa fa-circle-o"></i>坡向</a>
+					</li>
+					<li>
+						<a href="/contourline22" class="ajax"><i class="fa fa-circle-o"></i>竹林</a>
+					</li>
+					<li>
+						<a href="/contourline23" class="ajax"><i class="fa fa-circle-o"></i>耕地</a>
+					</li>
+					<li>
+						<a href="/contourline24" class="ajax"><i class="fa fa-circle-o"></i>道路</a>
+					</li>
+					<li>
+						<a href="/dem" class="ajax"><i class="fa fa-circle-o"></i>居民点</a>
+					</li>
+				</ul>
+			</li>
+
+<!-- 			<li class="treeview">
+				<a href="#">
+					<i class="fa fa-laptop"></i>
+					<span>水量表</span>
+				</a>
+
+			</li> -->
+
+
+<!-- 
+			<li>
+				<a href="#">
+					<i class="fa fa-th"></i> <span>管理日志</span>
+				</a>
+			</li>
+			 -->
+			
+			<li class="treeview">
+				<a href="#">
+					<i class="fa fa-pie-chart"></i>
+					<span>天气管理</span>
+					<i class="fa fa-angle-left pull-right"></i>
+				</a>
+				<ul class="treeview-menu">
+					<li>
+						<a  href="/PrecipitationEcharts_yearcomparison" class="ajax" ><i class="fa fa-circle-o"></i> 历史天气</a>
+					</li>
+<!-- 					<li>
+						<a  href="/weekweather" class="ajax" ><i class="fa fa-circle-o"></i> 一周天气</a>
+					</li> -->
+
+				</ul>
+			</li>
+
+			<li class="treeview">
+				<a href="#">
+					<i class="fa fa-dashboard"></i> <span>管理日志</span> <i class="fa fa-angle-left pull-right"></i>
+				</a>
+				<ul class="treeview-menu">
+					<li>
+						<a href="/users/addrizhi "><i class="fa fa-circle-o"></i>上传日志</a>
+					</li>
+					<li>
+						<a href="/users/showrizhi "><i class="fa fa-circle-o"></i>日志检索</a>
+					</li>
+					<li>
+						<a href="/emergency" class = "ajax"><i class="fa fa-circle-o"></i>紧急应对措施</a>
+					</li>
+				</ul>
+			</li>
+
+		</ul>
+	</section>
+</aside>
+<script>
+	$.sidebarMenu($('.sidebar-menu'))
+
+</script>

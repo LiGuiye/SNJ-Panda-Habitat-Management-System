@@ -1,0 +1,16 @@
+<div id="footer">CopyRight@copy2018 -By the seventh group</div>
+<!-- <script type="text/javascript" src="javascripts/LeafletMap.js" ></script> -->
+<script type="text/javascript" src="javascripts/MyLeaflet.js" ></script>
+		<script>
+			var printer = L.easyPrint({
+				title:'打印地图',
+				sizeModes: ['A4Landscape', 'A4Portrait'],
+				filename: 'myMap',
+				exportOnly: true,
+				hideControlContainer: true,
+				tileWait:100,
+				defaultSizeTitles:{A4Landscape: 'A4横版', A4Portrait: 'A4 竖版'}
+			}).addTo(map);
+		</script>
+</body> 
+</html> 
